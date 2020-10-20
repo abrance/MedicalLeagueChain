@@ -24,16 +24,6 @@ from constants import *
 """
 test -- get net_version
 """
-payload = {"jsonrpc": "2.0",
-           "method": method,
-           "params": params,
-           "id": 1}
-headers = {'Content-type': 'application/json'}
-response = session.post(URL, json=payload, headers=headers)
-logger.info('raw json response: {}'.format(response.json()))
-logger.info('network id: {}'.format(response.json()['result']))
-# create persistent HTTP connection
-
 
 # compile your smart contract with truffle first
 truffleFile = json.load(open(PATH_SC_TRUFFLE + '/build/contracts/Evidence.json'))

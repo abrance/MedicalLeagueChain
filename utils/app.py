@@ -9,8 +9,6 @@ import datetime
 """
 此模块提供 web3 ipc接口
 """
-def unlock(account, passphrase):
-    return w3.geth.personal.unlock_account(account, passphrase)
 
 
 class EthInit(object):

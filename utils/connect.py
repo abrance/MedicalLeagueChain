@@ -9,6 +9,9 @@ from utils.log import logger
 
 
 class HttpEthCon(object):
+    """
+    json_rpc 通信基类
+    """
     def __init__(self):
         self.json_req = None
         self.req_id = 0
@@ -32,8 +35,22 @@ class HttpEthCon(object):
 
 
 class GetTrans(HttpEthCon):
+    """
+    获取交易信息
+    """
     def __init__(self):
         super(GetTrans, self).__init__()
 
     def init(self, _params, _method='eth_getTransactionByHash'):
         super(GetTrans, self).init(_params, _method=_method)
+
+
+class TestServe(HttpEthCon):
+    """
+    测试 json_rpc服务是否可用
+    """
+    def __init__(self):
+        super(TestServe, self).__init__()
+
+    def init(self, _params, _method='net_version'):
+        super(TestServe, self).init(_params, _method=_method)

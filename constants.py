@@ -1,7 +1,5 @@
 import json
 
-method = 'net_version'
-params = []
 requestId = 0  # is automatically incremented at each request
 
 URL = 'http://localhost:8545'  # url of my geth node
