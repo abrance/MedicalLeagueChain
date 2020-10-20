@@ -1,0 +1,32 @@
+{
+    "config": {
+        "chainId": 8888,
+        "homesteadBlock": 0,
+        "daoForkBlock": 0,
+        "daoForkSupport": true,
+        "eip150Block": 0,
+        "eip155Block": 0,
+        "eip158Block": 0,
+        "byzantiumBlock": 0,
+        "constantinopleBlock": 0,
+        "petersburgBlock": 0,
+        "ethash": {},
+	"clique": {
+            "period": 5,
+            "epoch": 30000
+        }
+    },
+    "nonce": "0x42",
+    "timestamp": "0x0",
+    "extraData": "0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa",
+    "gasLimit": "0xffffffffffffff",
+    "difficulty": "0x1",
+    "alloc": {
+        "093f59f1d91017d30d8c2caa78feb5beb0d2cfaf": {
+            "balance": "0xffffffffffffffff"
+        },
+        "ddf7202cbe0aaed1c2d5c4ef05e386501a054406": {
+            "balance": "0xffffffffffffffff"
+        }
+    }
+}
