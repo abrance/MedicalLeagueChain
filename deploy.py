@@ -16,7 +16,7 @@ what
 """
 import time
 
-from utils.api import createJSONRPCRequestObject, postJSONRPCRequestObject, session, w3
+from utils.api import createJSONRPCRequestObject, postJSONRPCRequestObject, w3
 from utils.log import logger
 from constants import *
 
