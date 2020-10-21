@@ -3,7 +3,7 @@
 from utils.api import w3
 from utils.verify import get_md5
 from utils.log import logger
-from utils.app import unlock
+from utils.app import EthInit
 from constants import *
 
 file_hash = get_md5('1111')
@@ -34,7 +34,8 @@ class GetEvidence(object):
         return evi_ret
 
     def save_evidence(self, _filename_hash, _file_hash, timestamp):
-        ret = unlock(user, passwd)
+        eth = EthInit()
+        ret = eth.unlock(user, passwd)
         logger.info(ret)
         tx_hash = self.evidence.functions.saveEvidence(_filename_hash, _file_hash, timestamp).transact(
             {'from': user, 'gas': 900000, 'gasPrice': 10}
