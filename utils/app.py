@@ -56,6 +56,14 @@ class EthInit(object):
         self.commit('unlock', param, ret)
         return ret
 
+    @staticmethod
+    def get_private_key(key_store_file_path, passphrase):
+        # 2020/12/8 获取私钥
+        with open(key_store_file_path, "r") as file:
+            encrypted_key = file.read()
+            p_key = w3.eth.account.decrypt(encrypted_key, passphrase)
+            return p_key
+
 
 if __name__ == '__main__':
     a = EthInit()
