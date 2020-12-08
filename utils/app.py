@@ -62,6 +62,8 @@ class EthInit(object):
         with open(key_store_file_path, "r") as file:
             encrypted_key = file.read()
             p_key = w3.eth.account.decrypt(encrypted_key, passphrase)
+            import binascii
+            p_key = str(binascii.b2a_hex(p_key))
             return p_key
 
 
@@ -71,5 +73,3 @@ if __name__ == '__main__':
     # a.get_balance(user)
     # a.keccak()
     del a
-
-
